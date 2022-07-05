@@ -26,7 +26,7 @@ Using an incremental model limits the amount of data that needs to be transforme
 ## [Incremental models](https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models)
 
 
-## [Ephemeral models]
+## Ephemeral models
 
 ephemeral models are not directly built into the database. Instead, dbt will interpolate the code from this model into dependent models as a common table expression.
 
@@ -42,3 +42,7 @@ Cons:
 Use the ephemeral materialization for:
 - very light-weight transformations that are early on in your DAG
 - are only used in one or two downstream models, and do not need to be queried directly
+
+
+## Resources
+- [documents](https://docs.getdbt.com/docs/introduction)
