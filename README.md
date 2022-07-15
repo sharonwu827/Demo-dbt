@@ -46,3 +46,4 @@ Use the ephemeral materialization for:
 
 ## Resources
 - [documents](https://docs.getdbt.com/docs/introduction)
+- [How to structure dbt projects](https://discourse.getdbt.com/t/how-we-structure-our-dbt-projects/355)
