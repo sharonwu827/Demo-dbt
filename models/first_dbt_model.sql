@@ -1,4 +1,9 @@
-{{ config(materialized='table', alias='first_model', schema = 'Sharon_test', database = 'eng_test', tags=["nightly", "example"] ) }}
+{{ config(materialized='table'
+, alias='first_model'
+, schema = 'Sharon_test'
+, database = 'eng_test'
+, tags=["nightly", "example"] )
+}}
 
 with source_data as (
 
