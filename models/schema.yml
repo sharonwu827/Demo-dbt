@@ -6,8 +6,12 @@ models:
       columns:
           - name: id
             description: "The primary key for this table"
-            tests:
+            tests: # test criteria: the id is unique and not null
                 - unique
+                - not_null
+                - accepted_values:
+                    values: [1, 2]
+                    quote: false
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
@@ -18,7 +22,8 @@ models:
                 - unique
                 - relationships:
                     to: ref('my_first_dbt_model')
-                    field: id
+                    field: id # the id field in the my_second_dbt_model need to reference to my_first_dbt_model
+
     - name: snowflake_customer_purchases
       description: "the total purchases for each customer in snowflake sample data"
       columns:
